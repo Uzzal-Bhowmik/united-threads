@@ -9,8 +9,9 @@ export default function OwnerMsgCard({ message }) {
       {message?.file?.length > 0 && (
         <div className="mb-2 grid grid-cols-2 gap-2 rounded-xl border p-2">
           <Image.PreviewGroup>
-            {message?.file?.map((img) => (
+            {message?.file?.map((img, idx) => (
               <Image
+                key={idx}
                 src={img}
                 alt={img}
                 height={200}

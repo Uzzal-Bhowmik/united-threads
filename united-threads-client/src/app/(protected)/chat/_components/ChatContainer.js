@@ -257,8 +257,9 @@ export default function ChatContainer() {
               </button>
 
               <div className="grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-7">
-                {imgPreviews?.map((imgPreview) => (
+                {imgPreviews?.map((imgPreview, idx) => (
                   <Image
+                    key={idx}
                     src={imgPreview}
                     alt="image preview"
                     height={250}

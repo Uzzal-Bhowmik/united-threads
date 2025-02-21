@@ -22,8 +22,9 @@ export default function ReceiverMsgCard({ message, isDifferentSender }) {
       <div className="relative mt-2 max-w-max">
         {message?.file?.length > 0 && (
           <Image.PreviewGroup className="grid grid-cols-4 gap-4">
-            {message?.file?.map((img) => (
+            {message?.file?.map((img, idx) => (
               <Image
+                key={idx}
                 src={img}
                 alt={img}
                 height={200}
